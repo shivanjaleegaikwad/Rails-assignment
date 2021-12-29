@@ -1,0 +1,19 @@
+<h1>MicroBlog</h1>
+<ul>
+  <% @blogs.each do |blog| %>
+  <li>
+  <% if blog.ispublished? %>
+    <div class="blog">  
+      <%= link_to blog.title, blog %>
+      <span> Body :  </span>
+      <%= blog.body%> 
+      <%= blog.ispublished %>
+    <% else %>
+    <h1> Else Part </h1>
+    <% end %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Blog", new_blog_path %>
+

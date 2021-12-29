@@ -1,0 +1,16 @@
+<%= form_with model: blog do |blog| %>
+  <div>
+    <%= blog.label :title %><br>
+    <%= blog.text_field :title %>
+  </div>
+
+  <div>
+    <%= blog.label :body %><br>
+    <%= blog.text_area :body %><br>
+
+  </div>
+
+  <div>
+    <%= blog.submit %>
+  </div>
+<% end %>
